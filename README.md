@@ -2,7 +2,6 @@ dtg.dialog
 ==========
 
 封装的alert,confirm
-
 ==========
 
 使用方法：
