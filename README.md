@@ -1,7 +1,5 @@
-dtg.dialog
-
 ==========
-封装的alert,confirm
+封装的 alert,confirm 支持 jquery.js和zepto.js , 支持IE8以上浏览器
 ==========
 
 Alert使用方法：
