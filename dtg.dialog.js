@@ -26,24 +26,16 @@
 	}
 	
 	DtgDialog.prototype.alert = function(message, title){
-	   if( title == null ) title = '提示';
-	   if( message == null ) message = '';
        show(message, title,'alert',false);
     }
 	
 	DtgDialog.prototype.confirm = function(message, callback, title){
-	   if( title == null ) title = '提示';
-	   if( message == null ) message = '';
        show(message, title,'confirm',callback);
 	}
 	
-	DtgDialog.prototype.prompt = function(message, callback, title){
-	   if( title == null ) title = '提示';
-	   if( message == null ) message = '';
-       show(message, title,'prompt',callback);
-	}
-	
 	var show = function (msg ,title, target ,callback){
+           if( title == null ) title = '提示';
+	   if( msg == null ) msg = '';
 	   var uid = $.dtggetUUID();
 	   var html =  '<div id="dialog'+uid+'" class="dialog'+uuid+' '+options.isStyle+'">' +
 			       '<h1>'+title.replace(/\n/g, '<br />')+'</h1>' +
