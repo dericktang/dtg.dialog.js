@@ -10,7 +10,7 @@
 	   var date = new Date();
 	   var uuid = date.getTime();
 	   return uuid;
-	}
+	};
 	
 	var uuid = $.dtggetUUID();
 	
@@ -19,19 +19,19 @@
     function DtgDialog(style){
 	   if( style == null ) {
 	      if(!options.isUsedDefaultStyle)
-	         $("head").prepend(defaultStyle)
+	         $("head").prepend(defaultStyle);
 	   }else{
 	      options.isStyle = style;
 	   }
-	}
+	};
 	
 	DtgDialog.prototype.alert = function(message, title){
        show(message, title,'alert',false);
-    }
+    };
 	
 	DtgDialog.prototype.confirm = function(message, callback, title){
        show(message, title,'confirm',callback);
-	}
+	};
 	
 	var show = function (msg ,title, target ,callback){
            if( title == null ) title = '提示';
@@ -76,12 +76,12 @@
 	   	if( e.keyCode == 13 || e.keyCode == 27 ) $("#dialog_cancel"+uid).trigger('click');
 		if( callback ) callback(false);
 	   });
-	}
+	};
 	
 	var hidden = function(uid){
 	  $("#dialog"+uid).remove();
 	  $("#dialog_overlay"+uid).remove();
-	}
+	};
 
 	$.dtgAlert = function(message, title, style) {
 	    var al;
@@ -91,7 +91,7 @@
 		  al = new DtgDialog(style);
 		}
 		al.alert(message, title);
-	}
+	};
 	
 	$.dtgConfirm = function(message, callback, title, style){
 	    var cf;
@@ -101,5 +101,5 @@
 		  cf = new DtgDialog(style);
 		}
 		cf.confirm(message, callback, title);
-	}
+	};
 })($);
