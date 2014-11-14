@@ -1,3 +1,7 @@
+/*!
+ * dtg.dialog.js ~ Copyright (c) 2014 dericktang, https://github.com/dericktang/dtg.dialog.js
+ * Released under MIT license
+ */
 (function($) {
     var options = {
 		okBtn: '&nbsp;确定&nbsp;',
